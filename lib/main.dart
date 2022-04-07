@@ -70,9 +70,14 @@ class MyHomePage extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.blue,
               ),
-              child: Text('Drawer Header'),
+              child: Text('',
+                style: TextStyle(
+                  fontSize: 25,
+                ),
+              ),
             ),
             ListTile(
+              leading: Icon(Icons.home_sharp),
               title: const Text('ホーム'),
               onTap: () {
                 print('ホームボタンが押されました');
@@ -80,6 +85,7 @@ class MyHomePage extends StatelessWidget {
               },
             ),
             ListTile(
+              leading: Icon(Icons.search),
               title: const Text('検索'),
               onTap: () {
                 print('検索ボタンが押されました');
@@ -87,6 +93,7 @@ class MyHomePage extends StatelessWidget {
               },
             ),
             ListTile(
+              leading: Icon(Icons.mode_comment_rounded),
               title: const Text('面接対策'),
               onTap: () {
                 print('面接対策ボタンが押されました');
@@ -94,9 +101,18 @@ class MyHomePage extends StatelessWidget {
               },
             ),
             ListTile(
+              leading: Icon(Icons.assignment_ind),
               title: const Text('小論文対策'),
               onTap: () {
                 print('小論文対策ボタンが押されました');
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.sticky_note_2_sharp),
+              title: const Text('履歴書'),
+              onTap: () {
+                print('履歴書ボタンが押されました');
                 Navigator.pop(context);
               },
             ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'interview_page.dart';
+
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -70,7 +72,7 @@ class MyHomePage extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.blue,
               ),
-              child: Text('',
+              child: Text('CE就職支援アプリ',
                 style: TextStyle(
                   fontSize: 25,
                 ),
@@ -97,7 +99,11 @@ class MyHomePage extends StatelessWidget {
               title: const Text('面接対策'),
               onTap: () {
                 print('面接対策ボタンが押されました');
-                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => interviewPage()),
+                );
+                // Navigator.pop(context);
               },
             ),
             ListTile(

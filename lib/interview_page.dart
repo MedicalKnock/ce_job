@@ -5,7 +5,10 @@ class interviewPage extends StatelessWidget {
   Widget build(BuildContext context) {
    return Scaffold(
      appBar: AppBar(
-       title: const Text('面接対策'),
+       iconTheme: const IconThemeData(color: Colors.black),
+       title: const Text('面接対策',
+         style: TextStyle(color: Colors.black),),
+         backgroundColor: const Color(0xfff0f8ff),
        actions: [
          IconButton(
            icon: const Icon(
@@ -39,43 +42,51 @@ Widget buildCard_QandA() => Card(
   shape: RoundedRectangleBorder(
     borderRadius: BorderRadius.circular(24),
   ),
-  child: Container(
-    decoration: const BoxDecoration(
-      gradient: LinearGradient(
-        colors: [Colors.white, Color(0xfff0f8ff)],
-        begin: Alignment.topCenter,
-        end: Alignment.bottomCenter,
+  child: InkWell(
+    child: Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          colors: [Colors.white, Color(0xfff0f8ff)],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+        ),
+      ),
+      padding: const EdgeInsets.all(16),
+      child: Row(
+        children: [
+          const Image(
+            width: 60,
+            height: 60,
+            image: AssetImage("assets/images/22582293.jpg"),
+          ),
+          const SizedBox(width: 10,),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              Text(
+                '質問対策',
+                style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 4),
+              Text(
+                '事前に回答内容をメモしよう！',
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.black,
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     ),
-    padding: const EdgeInsets.all(16),
-    child: Row(
-      children: [
-        Image.network('https://assets.st-note.com/production/uploads/images/74412850/profile_367658e8990923a88853182e8caf84e7.jpg?width=60',
-        ),
-        const SizedBox(width: 10,),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            Text(
-              '質問対策',
-              style: TextStyle(
-                fontSize: 30,
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: 4),
-            Text(
-              '事前に回答内容をメモしよう！',
-              style: TextStyle(
-                fontSize: 15,
-                color: Colors.black,
-              ),
-            ),
-          ],
-        ),
-      ],
-    ),
+    onTap: () {
+      print('質問対策が押されました');
+    },
   ),
 );
 
@@ -86,43 +97,51 @@ Widget buildCard_interview() => Card(
   shape: RoundedRectangleBorder(
     borderRadius: BorderRadius.circular(24),
   ),
-  child: Container(
-    decoration: const BoxDecoration(
-      gradient: LinearGradient(
-        colors: [Colors.white, Color(0xfff0f8ff)],
-        begin: Alignment.topCenter,
-        end: Alignment.bottomCenter,
+  child: InkWell(
+    child: Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          colors: [Colors.white, Color(0xfff0f8ff)],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+        ),
+      ),
+      padding: const EdgeInsets.all(16),
+      child: Row(
+        children: [
+          const Image(
+            width: 60,
+            height: 60,
+            image: AssetImage("assets/images/22580704.jpg"),
+          ),
+          const SizedBox(width: 10,),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              Text(
+                '面接練習',
+                style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 4),
+              Text(
+                '仮想面接官と練習しよう！',
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.black,
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     ),
-    padding: const EdgeInsets.all(16),
-    child: Row(
-      children: [
-        Image.network('https://assets.st-note.com/production/uploads/images/74412850/profile_367658e8990923a88853182e8caf84e7.jpg?width=60',
-        ),
-        const SizedBox(width: 10,),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            Text(
-              '面接練習',
-              style: TextStyle(
-                fontSize: 30,
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: 4),
-            Text(
-              '仮想面接官と練習しよう！',
-              style: TextStyle(
-                fontSize: 15,
-                color: Colors.black,
-              ),
-            ),
-          ],
-        ),
-      ],
-    ),
+    onTap: () {
+      print('面接練習が押されました');
+    },
   ),
 );
 
@@ -133,42 +152,50 @@ Widget buildCard_look_back() => Card(
   shape: RoundedRectangleBorder(
     borderRadius: BorderRadius.circular(24),
   ),
-  child: Container(
-    decoration: const BoxDecoration(
-      gradient: LinearGradient(
-        colors: [Colors.white, Color(0xfff0f8ff)],
-        begin: Alignment.topCenter,
-        end: Alignment.bottomCenter,
+  child: InkWell(
+    child: Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          colors: [Colors.white, Color(0xfff0f8ff)],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+        ),
+      ),
+      padding: const EdgeInsets.all(16),
+      child: Row(
+        children: [
+          const Image(
+            width: 60,
+            height: 60,
+            image: AssetImage("assets/images/22584298.jpg"),
+          ),
+          const SizedBox(width: 10,),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              Text(
+                '練習履歴',
+                style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 4),
+              Text(
+                '過去の練習結果を振り返ろう！',
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.black,
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     ),
-    padding: const EdgeInsets.all(16),
-    child: Row(
-      children: [
-        Image.network('https://assets.st-note.com/production/uploads/images/74412850/profile_367658e8990923a88853182e8caf84e7.jpg?width=60',
-        ),
-        const SizedBox(width: 10,),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            Text(
-              '練習履歴',
-              style: TextStyle(
-                fontSize: 30,
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: 4),
-            Text(
-              '過去の練習結果を振り返ろう！',
-              style: TextStyle(
-                fontSize: 15,
-                color: Colors.black,
-              ),
-            ),
-          ],
-        ),
-      ],
-    ),
+    onTap: () {
+      print('練習履歴が押されました');
+    },
   ),
 );

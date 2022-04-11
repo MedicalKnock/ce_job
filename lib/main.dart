@@ -27,7 +27,10 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('ホーム'),
+        iconTheme: const IconThemeData(color: Colors.black),
+        title: const Text('ホーム',
+          style: TextStyle(color: Colors.black),),
+          backgroundColor: const Color(0xfff0f8ff),
         actions: [
           IconButton(
             icon: const Icon(
@@ -70,7 +73,7 @@ class MyHomePage extends StatelessWidget {
           children: [
             const DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.blue,
+                color: Color(0xfff0f8ff),
               ),
               child: Text('CE就職支援アプリ',
                 style: TextStyle(
@@ -103,7 +106,6 @@ class MyHomePage extends StatelessWidget {
                   context,
                   MaterialPageRoute(builder: (context) => interviewPage()),
                 );
-                // Navigator.pop(context);
               },
             ),
             ListTile(
